@@ -82,7 +82,7 @@ object Result {
   }
 
   class Lazy[T](expr: => T) {
-    lazy val value = expr
+    lazy val value: T = expr
 
     def apply(): T = value
   }
