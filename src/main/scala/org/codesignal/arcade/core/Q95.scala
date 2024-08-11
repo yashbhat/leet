@@ -22,7 +22,7 @@ object Q95 {
     else { 0 - x }
 
     def divide(q: Int, d: Int): (Int, Int) = {
-      if (q * d < 0) { (-1, 1) }
+      if (q < 0 || d < 0) { (-1, 1) }
       else if (d == 0) { (-1, 1) }
       else {
         val g = gcd(mod(q), mod(d))
